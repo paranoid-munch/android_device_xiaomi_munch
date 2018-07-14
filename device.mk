@@ -299,6 +299,10 @@ PRODUCT_COPY_FILES += \
 # Platform
 TARGET_BOARD_PLATFORM := kona
 
+# QMI
+PRODUCT_PACKAGES += \
+    libjson
+
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
