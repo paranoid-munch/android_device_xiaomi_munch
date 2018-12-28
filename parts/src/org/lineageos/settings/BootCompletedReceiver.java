@@ -31,7 +31,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
             return;
         }
-
+        // MiSound
+        DiracUtils.initialize(context);
+        
         // Thermal Profiles
         ThermalUtils.startService(context);
 
