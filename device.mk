@@ -77,7 +77,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.voice.volume.boost=none \
     vendor.audio.lowpower=true \
     vendor.audio.spkcal.copy.inhal=true \
-    vendor.audio.usb.disable.sidetone=true
+    vendor.audio.usb.disable.sidetone=true \
+    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
