@@ -59,7 +59,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.hal.output.suspend.supported=false \
     vendor.audio.offload.multiple.enabled=true \
     vendor.audio.offload.track.enable=false \
-    vendor.audio.offload.buffer.size.kb=256
+    vendor.audio.offload.buffer.size.kb=256 
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.media_vol_default=8 \
@@ -72,7 +72,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.audio.resampler.psd.halflength=960 \
     ro.audio.resampler.psd.cutoff_percent=98 \
     ro.audio.resampler.psd.tbwcheat=0 \
-    persist.bluetooth.sbc_hd_higher_bitrate=1
+    persist.bluetooth.sbc_hd_higher_bitrate=1 \
+    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.delta.refresh=true \
