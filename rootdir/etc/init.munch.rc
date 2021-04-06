@@ -81,6 +81,9 @@ on boot
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
 
+    # Disable native stats collection service
+    stop statsd
+
 on charger
     mkdir /mnt/vendor/persist
     chown root system /mnt/vendor/persist
