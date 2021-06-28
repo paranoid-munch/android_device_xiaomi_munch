@@ -195,8 +195,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.use_layer_ext=0 \
     debug.graphics.game_default_frame_rate.disabled=1 \
     debug.hwui.skia_tracing_enabled=false \
-    debug.hwui.skia_use_perfetto_track_events=false
-
+    debug.hwui.skia_use_perfetto_track_events=false \
+    
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.config.avoid_gfx_accel=true
+    
 # Doze
 PRODUCT_PACKAGES += \
     ParanoidDoze
