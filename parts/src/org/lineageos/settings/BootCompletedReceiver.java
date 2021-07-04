@@ -30,6 +30,7 @@ import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -49,7 +50,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         
         ThermalUtils.startService(context);
-        RefreshUtils.startService(context);        
+        RefreshUtils.startService(context);
+        TouchSamplingUtils.restoreSamplingValue(context);  
 
         // DC Dimming
         FileUtils.enableService(context);
