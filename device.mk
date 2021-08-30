@@ -330,6 +330,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.c2inputsurface=-1 \
+    ro.odm.build.media_performance_class=30
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
