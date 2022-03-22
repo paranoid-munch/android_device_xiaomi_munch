@@ -28,16 +28,23 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            return;
-        }
-        // MiSound
-        DiracUtils.initialize(context);
-        
-        // Thermal Profiles
-        ThermalUtils.startService(context);
-
-        // Per app refresh rate
-        RefreshUtils.startService(context);
+    if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+        return;
     }
+
+    if (DEBUG) {
+        Log.d(TAG, "Received boot completed intent");
+    }
+    
+    try {
+        DiracUtils.getInstance(context);
+    } catch (Exception e) {
+        Log.d(TAG, "Dirac is not present in system");
+    }
+
+    // Thermal Profiles
+    ThermalUtils.startService(context);
+
+    // Per app refresh rate
+    RefreshUtils.startService(context);
 }
