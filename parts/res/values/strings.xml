@@ -60,8 +60,4 @@
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
     <string name="dc_dimming_disable_hbm_first">Disable High Brightness Mode to enable DC Dimming</string>
 
-4    <!-- Dirac -->
-    <string name="dirac_tile_on">On</string>
-    <string name="dirac_tile_off">Off</string>
-
 </resources>
