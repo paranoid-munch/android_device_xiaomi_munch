@@ -73,6 +73,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# ANT+
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0.vendor
+
 # Audio
 $(call soong_config_set,tinycompress,enable_extended_compress_format,true)
 $(call soong_config_set,tinycompress,loop_compress_read,true)
