@@ -95,8 +95,6 @@ vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libtinycompress.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
-vendor/lib64/hw/audio.primary.kona.so
-vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib64/liba2dpoffload.so
 vendor/lib64/libaachaptics.so
 vendor/lib64/libacdb-fts.so
@@ -750,7 +748,6 @@ vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
-vendor/lib64/hw/sound_trigger.primary.kona.so
 
 # MDM
 vendor/bin/ks
