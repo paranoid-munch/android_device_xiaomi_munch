@@ -179,7 +179,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.qdcm.mode_combine=1 \
     vendor.display.use_layer_ext=0 \
     debug.hwui.skia_tracing_enabled=false \
-    debug.hwui.skia_use_perfetto_track_events=false
+    debug.hwui.skia_use_perfetto_track_events=false \
+    debug.sf.treat_170m_as_sRGB=1
 
 # Doze
 PRODUCT_PACKAGES += \
