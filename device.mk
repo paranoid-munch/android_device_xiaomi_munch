@@ -211,7 +211,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.avoid_gfx_accel=true
-    
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    debug.sf.enable_transaction_tracing=false
+
 # Doze
 PRODUCT_PACKAGES += \
     ParanoidDoze
