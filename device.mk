@@ -183,6 +183,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.hwui.skia_use_perfetto_track_events=false \
     debug.sf.treat_170m_as_sRGB=1
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    debug.sf.enable_transaction_tracing=false
+
 # Doze
 PRODUCT_PACKAGES += \
     ParanoidDoze
