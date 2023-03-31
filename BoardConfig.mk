@@ -84,6 +84,9 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 KERNEL_DEFCONFIG := vendor/munch_defconfig
 
+# Miui Camera
+TARGET_INCLUDES_MIUI_CAMERA := true
+
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := munch,munch_global,munch_in
 
