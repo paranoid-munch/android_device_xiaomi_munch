@@ -401,7 +401,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.manual_nw_rej_ct=1 \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.ucdetect.usb=true
-
+    
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.ipsec_tunnel_migration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnel_migration.xml
+    
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
