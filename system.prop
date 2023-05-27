@@ -38,5 +38,8 @@ ro.netflix.bsp_rev=Q8250-19134-1
 ro.boot.hardware.sku=munch
 ro.nfc.port=I2C
 
+# Feature flags
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
