@@ -181,7 +181,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.use_layer_ext=0 \
     debug.hwui.skia_tracing_enabled=false \
     debug.hwui.skia_use_perfetto_track_events=false \
-    debug.sf.treat_170m_as_sRGB=1
+    debug.sf.treat_170m_as_sRGB=1 \
+    vendor.display.vds_allow_hwc=1
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.enable_transaction_tracing=false
