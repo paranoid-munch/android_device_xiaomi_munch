@@ -17,9 +17,6 @@ debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
 persist.vendor.color.matrix=2
 
-# DPM
-persist.vendor.dpm.feature=1
-
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
@@ -30,9 +27,6 @@ persist.dbg.wfc_avail_ovr=1
 
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
-
-# Radio
-persist.vendor.radio.report_codec=1
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
