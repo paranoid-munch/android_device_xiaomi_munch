@@ -355,9 +355,11 @@ PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
     media_codecs_performance_c2.xml \
     video_system_specs.json \
-    media_codecs.xml \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 
 # Mlipay
 PRODUCT_PACKAGES += \
