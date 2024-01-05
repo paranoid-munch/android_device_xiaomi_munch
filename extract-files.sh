@@ -95,7 +95,11 @@ function blob_fixup() {
         vendor/lib/hw/audio.primary.kona.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libaudioroute.so" "libaudioroute-v34.so" "${2}"
-            ;;    
+            ;;
+        vendor/lib/libstagefright_soft_ac4dec.so | vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefright_soft_qtiflacdec.so | vendor/lib/libstagefrightdolby.so | vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefright_soft_ddpdec.so | vendor/lib64/libstagefrightdolby.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            ;;
         *)
             return 1
             ;;
