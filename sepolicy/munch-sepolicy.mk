@@ -19,7 +19,8 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/xiaomi/munch/sepolicy/private/xiaomi/bootanim \
     device/xiaomi/munch/sepolicy/private/xiaomi/camera \
     device/xiaomi/munch/sepolicy/private/xiaomi/dex2oat \
-    device/xiaomi/munch/sepolicy/private/xiaomi/sensors
+    device/xiaomi/munch/sepolicy/private/xiaomi/sensors \
+    device/xiaomi/munch/sepolicy/private/xiaomi/vold
 
 # QCOM Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += \
