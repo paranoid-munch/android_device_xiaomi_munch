@@ -160,6 +160,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sensor.pickup=xiaomi.sensor.pickup \
     ro.sensor.pickup.lower.value=2
 
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.dpm.feature=1 \
