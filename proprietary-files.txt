@@ -872,7 +872,6 @@ vendor/lib64/libril-qc-hal-qmi.so|12fb878e6140b2dc0bb08d2c94477ca14dac0711
 vendor/lib64/libril-qc-logger.so|5315c3f6c4347f993017371c9815a6e6d71cd698
 vendor/lib64/libril-qc-ltedirectdisc.so|3f5de3a1ab73dac212cb07a439786e9544967aac
 vendor/lib64/libril-qc-radioconfig.so|9aa2d62c3672a2bed80defb9b3e35e58e68b5660
-vendor/lib64/libril-qcril-hook-oem.so|113139729889be495c8ca6952db786d846726f83
 vendor/lib64/librilqmiservices.so|3665716e9dc1c9c03cf0eba8cd33da0fb13b2fa9
 vendor/lib64/libsettings.so|0fdb8c530067d209af15974abe807d7e2b98df0d
 vendor/lib64/qcrild_librilutils.so|c912087a3ba8a1c0717c5138e188a9f4d6f0bec6
