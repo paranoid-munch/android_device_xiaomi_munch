@@ -180,7 +180,6 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
-    vendor.display.use_smooth_motion=0
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.enable_hwc_vds=1 \
@@ -193,7 +192,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.sensortype=2 \
     vendor.display.defer_fps_frame_count=2 \
     vendor.display.qdcm.mode_combine=1 \
-    vendor.display.use_layer_ext=0
+    vendor.display.use_layer_ext=0 \
+    debug.graphics.game_default_frame_rate.disabled=1 
 
 # Doze
 PRODUCT_PACKAGES += \
