@@ -27,7 +27,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# ANT+
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0.vendor
+
 # Audio
+PRODUCT_PACKAGES += \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
@@ -71,6 +80,16 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.usb.disable.sidetone=true
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor \
+    audio.bluetooth.default \
+    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
+    libldacBT_enc \
+    libldacBT_abr \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true \
     persist.vendor.btstack.enable.twsplus=true \
@@ -98,6 +117,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libexif.vendor \
+    libgui.vendor \
+    liblz4.vendor \
+    libutilscallstack.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
@@ -270,8 +293,17 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # NeuralNetworks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
+    
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
 
 # NFC
+PRODUCT_PACKAGES += \
+    se_nq_extn_client \
+    ls_nq_client \
+    jcos_nq_client
+
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.boot.hardware.sku=munch
 
@@ -301,6 +333,14 @@ PRODUCT_COPY_FILES += \
 # Platform
 TARGET_BOARD_PLATFORM := kona
 
+# QMI
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libjson \
+    libjsoncpp.vendor \
+    libsqlite.vendor \
+    libvndfwk_detect_jni.qti
+
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
@@ -326,6 +366,11 @@ TARGET_COMMON_QTI_COMPONENTS := \
 
 # Radio
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    android.hardware.wifi.hostapd@1.0.vendor \
     libwpa_client
 
 PRODUCT_VENDOR_PROPERTIES += \
@@ -408,3 +453,7 @@ PRODUCT_COPY_FILES += \
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Wifi Display
+PRODUCT_PACKAGES += \
+    libpng.vendor
