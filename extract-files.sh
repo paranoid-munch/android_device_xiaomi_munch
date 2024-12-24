@@ -64,6 +64,9 @@ function blob_fixup() {
         vendor/lib64/libxmi_high_dynamic_range_cdsp.so)
             llvm-strip --strip-debug  "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            grep -q 'gettid: ' "${2}" || echo 'gettid: 1' >> "${2}"
+            ;;
     esac
 }
 
