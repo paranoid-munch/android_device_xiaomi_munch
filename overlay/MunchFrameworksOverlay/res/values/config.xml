@@ -80,6 +80,15 @@
     <dimen name="status_bar_height_portrait">38dp</dimen>
     <dimen name="status_bar_height_landscape">28dp</dimen>
 
+    <!-- the padding on the start of the statusbar -->
+    <dimen name="status_bar_padding_start">0dp</dimen>
+
+    <!-- the padding on the end of the statusbar -->
+    <dimen name="status_bar_padding_end">0dp</dimen>
+
+    <!-- Margin on the left side of the carrier text on Keyguard -->
+    <dimen name="keyguard_carrier_text_margin">26dp</dimen>
+
     <!-- Height of area above QQS where battery/time go (equal to status bar) -->
     <dimen name="quick_qs_offset_height">38dp</dimen>
 
