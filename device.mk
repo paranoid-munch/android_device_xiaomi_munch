@@ -184,7 +184,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.treat_170m_as_sRGB=1 \
     vendor.display.vds_allow_hwc=1 \
     debug.sf.hwc_hotplug_error_via_neg_vsync=1 \
-    debug.sf.hwc_hdcp_via_neg_vsync=1
+    debug.sf.hwc_hdcp_via_neg_vsync=1 \
+    debug.sf.disable_client_composition_cache=0
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.enable_transaction_tracing=false
