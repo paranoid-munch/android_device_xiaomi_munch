@@ -27,6 +27,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/battery \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/camera \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/display \
+    device/xiaomi/munch/sepolicy/private/xiaomi/hardware \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/dolby \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/fingerprint \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/ir \
