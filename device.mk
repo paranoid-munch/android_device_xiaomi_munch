@@ -177,7 +177,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.sensortype=2 \
     vendor.display.defer_fps_frame_count=2 \
     vendor.display.qdcm.mode_combine=1 \
-    vendor.display.use_layer_ext=0
+    vendor.display.use_layer_ext=0 \
+    debug.hwui.skia_tracing_enabled=false \
+    debug.hwui.skia_use_perfetto_track_events=false
 
 # Doze
 PRODUCT_PACKAGES += \
