@@ -193,7 +193,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.defer_fps_frame_count=2 \
     vendor.display.qdcm.mode_combine=1 \
     vendor.display.use_layer_ext=0 \
-    debug.graphics.game_default_frame_rate.disabled=1 
+    debug.graphics.game_default_frame_rate.disabled=1 \
+    debug.hwui.skia_tracing_enabled=false \
+    debug.hwui.skia_use_perfetto_track_events=false
 
 # Doze
 PRODUCT_PACKAGES += \
