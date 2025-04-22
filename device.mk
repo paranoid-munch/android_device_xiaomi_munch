@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
-
+    
 PRODUCT_PRODUCT_PROPERTIES += \
     aaudio.mmap_policy=1 \
     ro.vendor.audio.sdk.fluencetype=fluence \
@@ -58,7 +58,14 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.media_vol_default=8 \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_default=9 \
-    ro.config.vc_call_vol_steps=11
+    ro.config.vc_call_vol_steps=11 \
+    ro.audio.usb.period_us=20375 \
+    af.resampler.quality=7 \
+    ro.audio.resampler.psd.stopband=132 \
+    ro.audio.resampler.psd.halflength=960 \
+    ro.audio.resampler.psd.cutoff_percent=98 \
+    ro.audio.resampler.psd.tbwcheat=0 \
+    persist.bluetooth.sbc_hd_higher_bitrate=1
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.delta.refresh=true \
