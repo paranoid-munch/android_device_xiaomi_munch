@@ -44,6 +44,11 @@ AB_OTA_PARTITIONS := \
     vendor \
     vendor_boot
 
+# ART
+WITH_DEXPREOPT := true
+DEX_PREOPT_DEFAULT := generate-vdex-and-image
+WITH_DEXPREOPT_DEBUG_INFO := false
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := munch
 TARGET_NO_BOOTLOADER := true
