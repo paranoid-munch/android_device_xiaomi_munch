@@ -39,3 +39,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/vibrator \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/wireless \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/wlan
+
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    device/xiaomi/munch/sepolicy/private/xiaomi/camera
