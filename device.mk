@@ -100,6 +100,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.spkcal.copy.inhal=true \
     vendor.audio.usb.disable.sidetone=true
 
+# Battery
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.config.small_battery=true
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
