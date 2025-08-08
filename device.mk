@@ -186,7 +186,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.hwc_hotplug_error_via_neg_vsync=1 \
     debug.sf.hwc_hdcp_via_neg_vsync=1 \
     debug.sf.disable_client_composition_cache=0 \
-    ro.surface_flinger.enable_layer_caching=false
+    ro.surface_flinger.enable_layer_caching=false \
+    debug.sf.defer_refresh_rate_when_off=1
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.enable_transaction_tracing=false
