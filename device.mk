@@ -329,7 +329,19 @@ SPAMMY_LOG_TAGS := \
     vendor.qti.bluetooth@1.0-wake_lock \
     DisplayManagerService \
     DisplayModeController \
-    FrameTracker
+    FrameTracker \
+    QC2GrallocBuffer \
+    tftp_server \
+    LOWI-9.0.1.89.z \
+    wpa_supplicant \
+    InetDiagMessage \
+    QtiCarrierConfigHelper \
+    DeviceStatisticsService \
+    DeviceInfoHidlClient \
+    NearbyDiscovery \
+    NearbyPresence \
+    NearbySharing \
+    GmsClient
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
