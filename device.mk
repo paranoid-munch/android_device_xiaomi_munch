@@ -430,7 +430,9 @@ PRODUCT_PACKAGES += \
     MunchNfcOverlay \
     MunchSettingsOverlay \
     MunchSystemUIOverlay \
-    NoCutoutOverlay
+    NoCutoutOverlay \
+    WifiMainline \
+    WifiResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

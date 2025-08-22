@@ -1,0 +1,18 @@
+//
+// SPDX-FileCopyrightText: Paranoid Android
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "WifiResTarget",
+    manifest: "AndroidManifest.xml",
+    device_specific: true,
+    overrides: ["WifiResCommon_Sys"],
+}
+
+runtime_resource_overlay {
+    name: "WifiMainline",
+    manifest: "AndroidGoogleManifest.xml",
+    device_specific: true,
+    overrides: ["WifiResCommonMainline_Sys"],
+}
