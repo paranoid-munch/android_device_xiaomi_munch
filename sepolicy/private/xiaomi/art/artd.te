@@ -1,0 +1,5 @@
+allow artd app_data_file:lnk_file read;
+allow artd mnt_user_file:dir search;
+allow artd fuse:dir search;
+allow artd sdcardfs:dir search;
+allow artd media_rw_data_file:dir { search getattr };
