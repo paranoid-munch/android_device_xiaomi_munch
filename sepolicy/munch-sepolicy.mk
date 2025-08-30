@@ -14,7 +14,12 @@
 
 # Private Sepolicy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/xiaomi/munch/sepolicy/private
+    device/xiaomi/munch/sepolicy/private \
+    device/xiaomi/munch/sepolicy/private/xiaomi/art \
+    device/xiaomi/munch/sepolicy/private/xiaomi/bootanim \
+    device/xiaomi/munch/sepolicy/private/xiaomi/camera \
+    device/xiaomi/munch/sepolicy/private/xiaomi/dex2oat \
+    device/xiaomi/munch/sepolicy/private/xiaomi/sensors
 
 # QCOM Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += \
@@ -25,6 +30,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/audio \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/bluetooth \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/battery \
+    device/xiaomi/munch/sepolicy/vendor/xiaomi/bluetooth \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/camera \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/display \
     device/xiaomi/munch/sepolicy/private/xiaomi/hardware \
@@ -42,7 +48,3 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/vibrator \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/wireless \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/wlan
-
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/xiaomi/munch/sepolicy/private/xiaomi/camera \
-    device/xiaomi/munch/sepolicy/private/xiaomi/sensors
