@@ -41,6 +41,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
+# ART
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Audio
 PRODUCT_PACKAGES += \
     libqcompostprocbundle \
