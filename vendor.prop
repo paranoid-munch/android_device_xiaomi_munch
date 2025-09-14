@@ -230,6 +230,9 @@ ro.camera.notify_nfc=1
 # OTG
 persist.sys.oem.otg_support=true
 
+# Perf
+vendor.perf.framepacing.enable=1
+
 # Radio
 persist.rcs.supported=0
 persist.vendor.radio.atfwd.start=true
