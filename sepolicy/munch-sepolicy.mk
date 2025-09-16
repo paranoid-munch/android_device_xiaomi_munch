@@ -17,8 +17,10 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/xiaomi/munch/sepolicy/private \
     device/xiaomi/munch/sepolicy/private/xiaomi/art \
     device/xiaomi/munch/sepolicy/private/xiaomi/bootanim \
+    device/xiaomi/munch/sepolicy/private/xiaomi/boringssl \
     device/xiaomi/munch/sepolicy/private/xiaomi/camera \
     device/xiaomi/munch/sepolicy/private/xiaomi/dex2oat \
+    device/xiaomi/munch/sepolicy/private/xiaomi/prng_seeder \
     device/xiaomi/munch/sepolicy/private/xiaomi/sensors \
     device/xiaomi/munch/sepolicy/private/xiaomi/vold
 
