@@ -281,6 +281,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     perf \
     telephony \
+    wfd \
     wlan
 
 # QTI fwk-detect
@@ -353,10 +354,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink \
     firmware_wlan_mac.bin_symlink
-
-# Wi-Fi Display
-PRODUCT_PACKAGES += \
-    libwfdaac_vendor
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/munch/munch-vendor.mk)
