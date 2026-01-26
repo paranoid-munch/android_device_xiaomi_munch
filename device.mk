@@ -79,6 +79,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.spkcal.copy.inhal=true \
     vendor.audio.usb.disable.sidetone=true
 
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
