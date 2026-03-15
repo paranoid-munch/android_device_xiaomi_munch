@@ -115,10 +115,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
-        vendor/etc/msm_irqbalance.conf)
-            [ "$2" = "" ] && return 0
-            sed -i 's/IGNORED_IRQ=27,23,38/IGNORED_IRQ=27,23,38,267,305/g' "${2}"
-            ;;
         vendor/etc/init/vendor.qti.media.c2@1.0-service.rc)
             [ "$2" = "" ] && return 0
             sed -i 's|writepid /dev/cpuset/foreground/tasks|task_profiles ProcessCapacityHigh HighPerformance|g' "${2}"
