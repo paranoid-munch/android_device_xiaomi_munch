@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/org.lineageos.settings.HBMFragment"
+	xmlns:settings="http://schemas.android.com/apk/res/co.aospa.HBMFragment"
 	android.title="@string/hbm_fragment_title">
 
     <PreferenceCategory>
@@ -38,12 +38,12 @@
             android:title="@string/auto_hbm_title"
             android:summary="@string/auto_hbm_summary" />
 
-        <org.lineageos.settings.hbm.AutoHBMThresholdPreference
+        <co.aospa.hbm.AutoHBMThresholdPreference
             android:key="auto_hbm_threshold"
             android:title="@string/auto_hbm_threshold_title"
             android:summary="@string/auto_hbm_threshold_summary" />
 
-        <org.lineageos.settings.hbm.AutoHBMTimePreference
+        <co.aospa.hbm.AutoHBMTimePreference
             android:key="hbm_disable_time"
             android:title="@string/hbm_disable_time_title"
             android:summary="@string/hbm_disable_time_summary" />

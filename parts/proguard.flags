@@ -1,23 +1,23 @@
--keep class org.lineageos.settings.* {
+-keep class co.aospa.* {
   *;
 }
 
--keep class org.lineageos.settings.dirac.* {
+-keep class co.aospa.dirac.* {
   *;
 }
 
--keep class org.lineageos.settings.speaker.* {
+-keep class co.aospa.speaker.* {
   *;
 }
 
--keep class org.lineageos.settings.refreshrate.* {
+-keep class co.aospa.refreshrate.* {
   *;
 }
 
--keep class org.lineageos.settings.thermal.* {
+-keep class co.aospa.thermal.* {
   *;
 }
 
--keep class org.lineageos.settings.touchsampling.* {
+-keep class co.aospa.touchsampling.* {
   *;
 }
