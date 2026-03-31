@@ -275,6 +275,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
     av \
     bt \
+    charging \
     overlay \
     perf \
     telephony \
