@@ -220,10 +220,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.fp.vendor=fpc,goodix \
     ro.hardware.fp.sideCap=true
 
-# FRP
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
