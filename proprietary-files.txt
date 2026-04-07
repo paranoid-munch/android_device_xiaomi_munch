@@ -238,16 +238,6 @@ vendor/lib64/libcvp_common.so|f702d19f14e018a74302f7e9b956b3ea2c505c61
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so|011cb17f3eedb9b1fa72cbb0f2017976e303f4dc
 
 # Camera
-vendor/lib/libcamxexternalformatutils.so
-vendor/lib/libcamxfacialfeatures.so
-vendor/lib/libcamxfdalgo.so
-vendor/lib/libcamxfdengine.so
-vendor/lib/libcamxifestriping.so
-vendor/lib/libcamximageformatutils.so
-vendor/lib/libcamxncs.so
-vendor/lib/libcamxstatscore.so
-vendor/lib/libcamxswprocessalgo.so
-vendor/lib/libcamxtintlessalgo.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libHalSuperSensorServer.so
