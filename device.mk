@@ -515,3 +515,8 @@ PRODUCT_COPY_FILES += \
 # Wifi Display
 PRODUCT_PACKAGES += \
     libpng.vendor
+
+# WLAN
+PRODUCT_PACKAGES += \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    firmware_wlan_mac.bin_symlink
