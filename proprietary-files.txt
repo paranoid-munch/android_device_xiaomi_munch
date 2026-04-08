@@ -1012,7 +1012,6 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|75ea187b76895fb3726b1b0b22f
 # Sensor-calibrate
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
