@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Audio
+$(call soong_config_set,tinycompress,enable_extended_compress_format,true)
+$(call soong_config_set,tinycompress,loop_compress_read,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
