@@ -20,11 +20,15 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.util.Log;
 
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
+    private static final String TAG = "XiaomiParts";
+    private static final boolean DEBUG = true; 
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -47,4 +51,5 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     // Per app refresh rate
     RefreshUtils.startService(context);
+    }
 }
