@@ -1,0 +1,10 @@
+genfscon sysfs /class/power_supply/battery/input_suspend                                            u:object_r:vendor_sysfs_battery_supply:s0
+
+# Display HBM
+genfscon sysfs /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm u:object_r:vendor_sysfs_graphics:s0
+
+# Display dim layer Exposure
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure u:object_r:vendor_sysfs_graphics:s0
+
+# FPS Info
+genfscon sysfs /class/drm/sde-crtc-0/measured_fps                               u:object_r:vendor_sysfs_graphics:s0

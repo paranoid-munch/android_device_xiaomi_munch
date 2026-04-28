@@ -1,0 +1,26 @@
+type devicesettings_app, domain;
+typeattribute devicesettings_app mlstrustedsubject;
+
+allow devicesettings_app vendor_sysfs_graphics:file write;
+r_dir_file(devicesettings_app, vendor_sysfs_graphics)
+
+# Allow DeviceSettings to get settingsdebug.instant.packages prop
+get_prop(devicesettings_app, settingslib_prop)
+
+# Allow XiaomiParts to read/write to sysfs_htsr;allow devicesettings_app sysfs_htsr:file rw_file_perms;
+
+# Allow devicesettings_app to access battery sysfs for charge bypass
+allow devicesettings_app vendor_sysfs_battery_supply:dir search;
+allow devicesettings_app vendor_sysfs_battery_supply:file rw_file_perms;
+
+# Allow devicesettings_app to operate with vendor_sysfs_graphics
+r_dir_file(devicesettings_app, vendor_sysfs_graphics)
+allow devicesettings_app vendor_sysfs_graphics:file w_file_perms;
+
+allow devicesettings_app vendor_sysfs_battery_supply:dir search;
+allow devicesettings_app vendor_sysfs_battery_supply:file r_file_perms;
+
+allow devicesettings_app proc_stat:file { read open getattr };
+
+allow devicesettings_app vendor_sysfs_kgsl_gpuclk:file { read open getattr };
+allow devicesettings_app vendor_sysfs_kgsl:file { read open getattr };

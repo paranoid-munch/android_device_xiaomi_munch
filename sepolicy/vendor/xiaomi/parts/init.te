@@ -1,0 +1,2 @@
+# Charge bypass - input_suspend node
+allow init vendor_sysfs_battery_supply:file rw_file_perms;

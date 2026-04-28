@@ -1,0 +1,11 @@
+# Touch Sampling
+/sys/devices/virtual/touch/touch_dev/bump_sample_rate                                               u:object_r:sysfs_htsr:s0
+
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm                                                    u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure                                      u:object_r:vendor_sysfs_graphics:s0
+
+# Process and system statistics files
+/proc/stat u:object_r:proc_stat:s0
+
+# FPS Info
+/sys/class/drm/sde-crtc-0/measured_fps                               u:object_r:vendor_sysfs_graphics:s0

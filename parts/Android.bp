@@ -1,6 +1,5 @@
 //
 // Copyright (C) 2017-2021 The LineageOS Project
-//           (C) 2023 Paranoid Android
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -8,7 +7,11 @@
 android_app {
     name: "XiaomiParts",
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java"
+    ],
+
     resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
@@ -17,9 +20,24 @@ android_app {
 
     static_libs: [
         "co.aospa.resources",
+        "SettingsLib",
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "androidx.appcompat_appcompat",
     ],
 
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+
+    required: [
+        "privapp_whitelist_co.aospa.settings.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_co.aospa.settings.xml",
+    src: "permissions/privapp_whitelist_co.aospa.settings.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
 }

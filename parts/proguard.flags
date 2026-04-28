@@ -1,7 +1,27 @@
--keep class org.lineageos.settings.* {
+-keep class co.aospa.settings.* {
   *;
 }
 
--keep class org.lineageos.settings.dirac.* {
+-keep class co.aospa.settings.dirac.* {
+  *;
+}
+
+-keep class co.aospa.settings.display.* {
+  *;
+}
+
+-keep class co.aospa.settings.speaker.* {
+  *;
+}
+
+-keep class co.aospa.settings.refreshrate.* {
+  *;
+}
+
+-keep class co.aospa.settings.touchsampling.* {
+  *;
+}
+
+-keep class co.aospa.settings.thermal.* {
   *;
 }
