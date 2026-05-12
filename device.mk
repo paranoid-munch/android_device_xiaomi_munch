@@ -301,6 +301,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.boot.hardware.sku=munch \
     ro.nfc.port=I2C
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.nfc_cfg.config_file_name=libnfc-nci.conf
+
 NFC_PERMISSIONS_DIR := $(TARGET_COPY_OUT_VENDOR)/etc/permissions
 
 PRODUCT_COPY_FILES += \
