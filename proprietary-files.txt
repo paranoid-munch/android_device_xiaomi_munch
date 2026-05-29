@@ -557,17 +557,33 @@ vendor/lib64/libdpmqmihal.so|67a75d6bd39f4bc825e14d21fa5b61e26ac82b22
 
 # DRM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|d3d6ed383483747f8bec574adcac1c24ef1ac3a4
+vendor/bin/qseecomd|33a909924161d0478bbbe9a74c7b89838175960d
 vendor/bin/ssgtzd|1d906a379edc6df57aef7c3c2c55e285596ba8f7
+vendor/etc/init/qseecomd.rc|0ebfb7c5d1d2459be4fdac951a182dc486f3bda7
 vendor/etc/init/ssgtzd.rc|140086da548acd74420c8f494c3351b4dedc1c80
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
 vendor/etc/ssg/ta_config.json|e18554b038da3737b7352d1271e5fde9c789c9df
 vendor/etc/ssg/tz_whitelist.json|c0dc4f4cfee20db5993eb5142e362cba7dfaecd6
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|6825e9396f6e04d4739ca6dbeecd69502c01fa8a
+vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
+vendor/lib64/libGPreqcancel_svc.so|95d9dc2db6355d34fbc766f7c63e8e8832f3a11f
+vendor/lib64/libQSEEComAPI.so|edb65132da446e4bec18e3f09673e669efce22a0
+vendor/lib64/libbase64.so|32279e9994333ae02f848000483e62bb15e8ff94
+vendor/lib64/libcpion.so|19fb60c620d91e0252596165f42fc6277f7e1fb3
+vendor/lib64/libdrmfs.so|587f73b4ffec2bb205e9647bb7b2e0947c21ad8c
+vendor/lib64/libdrmtime.so|f74a243d32606e69dc7c424eaecb19dcc7ee9605
+vendor/lib64/libminksocket.so|a347a693401d263290eb2706eee82830d3ceb673
+vendor/lib64/libops.so|fbfda5ddd143c4e29f7eddbeef07f68c35385e65
 vendor/lib64/libpvr.so|66eb207b47f32bb157b296edc2b8ff864c63eb02
+vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
 vendor/lib64/librmp.so|96741cb9f27a80b5cc2535abaa305ac0970584c9
+vendor/lib64/librpmb.so|fd9b71d4be50ee890f9c26cea05fafe90ac5d420
 vendor/lib64/libsi.so|1b58928c6dc314f5e5dc42fd09d1c551c542ee68
 vendor/lib64/libspl.so|e2b3e2dd28b0eee567d72de696cd1e01288ae06f
+vendor/lib64/libssd.so|0d037418e3bdc6d9ba94ce7020a04e85a06fab96
+vendor/lib64/libtrustedapploader.so|030366cf9b29f9beacea371f1c2a8781664be851
+vendor/lib64/libtzdrmgenprov.so|e7655063b02bc7a5802a384a44238f9e874703d4
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|5b1046bc7c8a3f590bfedde06490b51adfeca923
 
 # DRM-HDCP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
@@ -621,6 +637,10 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so|e4fc8e5b0e7e9c609ed8c78309c3d6d8
 vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so|86a03bcc9a34bff0bd29f6c862da248fb81d7d55
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so|a4f353cac95f9cf034a5a91fe6419f6fb85f3d70
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|21f382e07844ec79b33950ec00f6a1bcd9a33611
+
+# Diag - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
+vendor/lib/libdiag.so|d924893c1a9a022367745f9f8b483fde0563dc07
+vendor/lib64/libdiag.so|8c7de006d77b44ef24834adcd56e5cd2a3dc98b7
 
 # Display (SDM) - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib64/libdisp-aba.so|41fc61cdc8821ed206f649dd2eb5562b346ade77
@@ -849,7 +869,11 @@ vendor/lib64/libsystem_health_mon.so|9b13ab7123f78ad044e5dd75f14dc7a4ae8267f3
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|00dfdec5db40bbd3bd2af327200a61a73cbd47d7
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|cfbc6c28a93f13a59705c10d30e3218b9811cba2
+vendor/lib64/libGPQTEEC_vendor.so|d70f659c06a38dbae028f41ca6e0dece0ef1d5cd
+vendor/lib64/libGPTEE_vendor.so|92c0215dbd3271e597d536c259df44aac716a402
 vendor/lib64/libQTEEConnector_listener.so|bd2d7041c20eeeb85436696377edfbd1d302df49
+vendor/lib64/libQTEEConnector_vendor.so|30e5fd8d4fff50083f44f6d0bd09f4bd287a8366
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|16abc70df20edc071deb364f130353ad3543c129
 
 # Radio - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/hw/qcrild|34ed5cea445577caa24385185cdb28881135972d
@@ -984,6 +1008,7 @@ vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|200237017fdf72f5338dd
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|1b0b2665e8ebd65dccb832078fbca81f951e9908
 
 # SMC Invoke - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
+vendor/lib64/libminkdescriptor.so|7237570df0118124564a85a34a387e9cba7e3cd3
 vendor/lib64/libnative-api.so|fd6cf92e0347452288758b6ecc25b449535ecb61
 
 # SSR - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
@@ -1138,6 +1163,7 @@ vendor/etc/thermald-devices.conf
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
 vendor/bin/time_daemon|5ac6b1af3c41eecad1e522df8e272db5fab86523
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+vendor/lib64/libtime_genoff.so|17547993adc4fb9cb1cdc1abbd765f4ef9a05f09
 
 # UBWC - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib/libstreamparser.so|935aabbbde4806bad2e09453c73004238d69db6f

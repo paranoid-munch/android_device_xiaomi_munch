@@ -470,7 +470,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     keymaster \
     overlay \
     perf \
-    qseecomd \
     telephony \
     usb \
     wfd \
