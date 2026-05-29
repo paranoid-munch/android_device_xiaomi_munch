@@ -3,6 +3,7 @@
 # ADSP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/loadalgo|487e763413fecc0fb1d57f271df03ad5db824a46
 vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
+vendor/lib/libfastcrc.so
 vendor/lib/libsdsprpc.so|f5061af7b154060304e14e283d220f04c143a361
 vendor/lib64/libloadalgo_stub.so|f544ef182d9cdc77e02eb8cc2a29ce4c02d0ddfc
 vendor/lib64/libsdsprpc.so|ec57a3858d3e2a2ee63dd23fffc8ca4b7923837d
@@ -120,8 +121,14 @@ vendor/etc/init/init.batteryd.rc
 vendor/etc/init/init.batterysecret.rc
 
 # Media (Codec2) - MIUI (munch)
+vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy|9f6a77271971618b555d41d83e5c55f3cff684d2
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
+vendor/lib/libqcodec2_base.so
+vendor/lib/libqcodec2_basecodec.so
 vendor/lib/libqcodec2_core.so|b92991b36af312411eb4779fea1a5c22550c1d56
+vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so|485acb30246d20a1cfb0c91a9b3e185338d41d17
 vendor/lib/libqcodec2_v4l2codec.so|67057e81477e4b3432997b9d269e3db39c50e421
 
@@ -1153,6 +1160,9 @@ vendor/lib/libvpphcp.so|eae028e7d09dad3dcc1d95b3c7b057b5a7c14da7
 vendor/lib/libvpphvx.so|353f3d77eb9d55e130b0ebd8a77a1772180666c6
 vendor/lib/libvppimmotion.so|33bd92e52ba4062c68931357fa04aa0734b2a73d
 vendor/lib/libvpplibrary.so|50f6c7c16f7e3cc101202932f571c553a28c6782
+vendor/lib/vendor.qti.hardware.vpp@1.1.so
+vendor/lib/vendor.qti.hardware.vpp@1.2.so
+vendor/lib/vendor.qti.hardware.vpp@1.3.so
 vendor/lib/libvpptestutils.so|9e0a3c0cd5303882a4d3d7e821d7e413e38afcac
 vendor/lib64/libvppclient.so|31118af9675c3dbb70fbedee4da92c5fc7579ba1
 vendor/lib64/libvpphcp.so|7fd74603c18b2e703117924e12a8e158aca1fa11
@@ -1160,6 +1170,9 @@ vendor/lib64/libvpphvx.so|04a5377edeac4cc0e0e23ca49d056c99de9744d9
 vendor/lib64/libvppimmotion.so|4655f5884f3ccd47b7db7175221637379d60593e
 vendor/lib64/libvpplibrary.so|ae96dfeded184ba9b95ccda7b211061b96b55824
 vendor/lib64/libvpptestutils.so|80a3d41806855d6ee2c5b670123de7eefd78a0bd
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so
+vendor/lib64/vendor.qti.hardware.vpp@1.2.so
+vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
 # WiFi
 vendor/bin/cnss-daemon
