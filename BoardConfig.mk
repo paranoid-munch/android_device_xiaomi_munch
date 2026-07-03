@@ -120,6 +120,7 @@ BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 
 
 # Partitions - reserved size
 -include vendor/lineage/config/BoardConfigReservedSize.mk
+BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 52428800
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
