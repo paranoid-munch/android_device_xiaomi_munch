@@ -1,4 +1,4 @@
-# Common device tree for Xiaomi SM8250 devices
+# Device Tree for Xiaomi Munch (Redmi K40s/POCO F4)
 
 ```
 #
