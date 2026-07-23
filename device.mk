@@ -182,7 +182,8 @@ PRODUCT_COPY_FILES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    XiaomiParts \
+    DolbyAtmos
 
 # Dolby VNDK libs
 PRODUCT_COPY_FILES += \
