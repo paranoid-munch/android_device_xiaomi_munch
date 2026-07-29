@@ -283,8 +283,6 @@ PRODUCT_PACKAGES += \
     uinput-goodix.kl
 
 PRODUCT_PACKAGES += \
-    Xiaomi_Keyboard.idc \
-    uinput-fortsense.idc \
     uinput-fpc.idc \
     uinput-goodix.idc
 
