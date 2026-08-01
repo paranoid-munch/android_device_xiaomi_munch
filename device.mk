@@ -27,7 +27,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# ANT+
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0.vendor
+
 # Audio
+PRODUCT_PACKAGES += \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
@@ -71,6 +80,16 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.usb.disable.sidetone=true
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor \
+    audio.bluetooth.default \
+    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
+    libldacBT_enc \
+    libldacBT_abr \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.btstack.enable.lpa=true \
     persist.vendor.btstack.enable.twsplus=true \
@@ -283,9 +302,18 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
 # NFC
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.boot.hardware.sku=munch
+
+PRODUCT_PACKAGES += \
+    se_nq_extn_client \
+    ls_nq_client \
+    jcos_nq_client
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -355,6 +383,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.manual_nw_rej_ct=1 \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.ucdetect.usb=true
+
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    android.hardware.wifi.hostapd@1.0.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
