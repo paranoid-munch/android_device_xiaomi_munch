@@ -374,8 +374,6 @@ PRODUCT_PACKAGES += \
 
 # Media configs
 PRODUCT_PACKAGES += \
-    media_codecs_c2.xml \
-    media_codecs_performance_c2.xml \
     video_system_specs.json \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor
@@ -447,6 +445,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
     av \
     bt \
+    media \
     overlay \
     perf \
     telephony \
