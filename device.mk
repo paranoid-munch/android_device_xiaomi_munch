@@ -227,8 +227,6 @@ $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,fal
 # Media configs
 PRODUCT_PACKAGES += \
     media_codecs.xml \
-    media_codecs_c2.xml \
-    media_codecs_performance_c2.xml \
     video_system_specs.json
 
 # NFC
@@ -277,6 +275,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
     av \
     bt \
+    media \
     overlay \
     perf \
     telephony \
