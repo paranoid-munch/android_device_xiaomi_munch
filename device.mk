@@ -268,11 +268,6 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # Media
-PRODUCT_PACKAGES += \
-    libavservices_minijail_vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
-
 TARGET_SUPPORTS_OMX_SERVICE := false
 
 PRODUCT_VENDOR_PROPERTIES += \
