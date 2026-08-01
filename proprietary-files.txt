@@ -66,7 +66,6 @@ vendor/etc/acdbdata/Tutu/Tutu_Speaker_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_workspaceFile.qwsp
 
 # Audio
-vendor/bin/audioflacapp
 vendor/lib/hw/audio.primary.kona.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/vndk/libxlog.so
@@ -87,7 +86,6 @@ vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libdrc.so
-vendor/lib/libdsd2pcm.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libmulawdec.so
 vendor/lib/libqtigef.so
@@ -773,41 +771,7 @@ vendor/lib64/vendor.qti.hardware.factory@1.0.so|c963c06703bb78600e49f98f3965cc61
 vendor/lib64/vendor.qti.hardware.factory@1.1.so|7e5e3b94aa502390fa2139d59ffa1ad49143066a
 
 # Media
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libFlacSwDec.so
-vendor/lib/libMpeghSwEnc.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxMpeghDecSw.so
-vendor/lib/libOmxMpeghEncSw.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxWmaDec.so
 vendor/lib/libmmosal.so
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libFlacSwDec.so
-vendor/lib64/libMpeghSwEnc.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAlacDecSw.so
-vendor/lib64/libOmxAmrDec.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxG711Dec.so
-vendor/lib64/libOmxMpeghEncSw.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libmmosal.so
 
 # NFC
@@ -1244,14 +1208,12 @@ vendor/firmware/aw8697_rtp_1.bin
 # VPP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/vppservice|004a03d724b58b7ba14fe76f91207766f4530d6a
 vendor/etc/init/vppservice.rc|24c089e0e413cbb3fa6daaf0af4215870bdf1b8e
-vendor/lib/libOmxVpp.so|3dc9bbb6084223a9ad65722162d6fb1a474d0533
 vendor/lib/libvppclient.so|20e12a74d5da09c8f16e019e164b9a8a5dce874a
 vendor/lib/libvpphcp.so|eae028e7d09dad3dcc1d95b3c7b057b5a7c14da7
 vendor/lib/libvpphvx.so|353f3d77eb9d55e130b0ebd8a77a1772180666c6
 vendor/lib/libvppimmotion.so|33bd92e52ba4062c68931357fa04aa0734b2a73d
 vendor/lib/libvpplibrary.so|50f6c7c16f7e3cc101202932f571c553a28c6782
 vendor/lib/libvpptestutils.so|9e0a3c0cd5303882a4d3d7e821d7e413e38afcac
-vendor/lib64/libOmxVpp.so|692b52d9fb51866c8a6475d475eddb4440b753f1
 vendor/lib64/libvppclient.so|31118af9675c3dbb70fbedee4da92c5fc7579ba1
 vendor/lib64/libvpphcp.so|7fd74603c18b2e703117924e12a8e158aca1fa11
 vendor/lib64/libvpphvx.so|04a5377edeac4cc0e0e23ca49d056c99de9744d9
