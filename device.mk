@@ -152,10 +152,6 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Device Settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.sf.color_mode=0 \
