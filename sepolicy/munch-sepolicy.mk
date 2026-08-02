@@ -29,6 +29,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/fingerprint \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/ir \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/modem \
+    device/xiaomi/munch/sepolicy/vendor/xiaomi/parts \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/power_supply \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/sensors \
     device/xiaomi/munch/sepolicy/vendor/xiaomi/thermald \
