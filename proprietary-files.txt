@@ -578,7 +578,6 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 # Data - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/ATFWD-daemon|94af1767c77ed9835cbb66b0ba729b71e0044e1a
 vendor/bin/adpl|edb051f8fc13c991585372a62ba73689e73049f5
-vendor/bin/embmsslServer|514b6a8550016ecc9e3607e2ea7ef32d9eef3f5b
 vendor/bin/ipacm-diag|e04eea3b9431f7cabcdf1b29be9c503d780a232e
 vendor/bin/netmgrd|77a452dbb4af5c700621134251cc48e43b3e0a48
 vendor/bin/port-bridge|7d4f248ddc722ce51bfa05cd5a311d10fe501ebe
@@ -586,7 +585,6 @@ vendor/bin/qti|b12f74354cace0fc47a4bff3ef6b1b90f8db51f4
 vendor/bin/shsusrd|c2eb865e10fd553d881f48f9e744c1fb50e4674b
 vendor/etc/data/dsi_config.xml|85f76668d6b6f87402c534f284c286676edefa93
 vendor/etc/data/netmgr_config.xml|f5d263abc394c1a770d7464b86c5b0c590523c9b
-vendor/etc/init/init.embmssl_server.rc|e2f59e5d6223112bdcfbf9e9e69fe6abea3698b1
 vendor/etc/init/ipa_fws.rc|f1826b81077f51470c97781823f109f12361ac8b
 vendor/etc/init/ipacm-diag.rc|e3cee56d2e3ca6bf9aafb827827ebea369fc2897
 vendor/etc/init/netmgrd.rc|5c592bd2cf775462e147d3def97e99abbac4631e
@@ -596,7 +594,6 @@ vendor/etc/seccomp_policy/atfwd@2.0.policy|74fdb7d47bdb6d0cb06b13701a96a76c9171a
 vendor/lib64/libconfigdb.so|27c335441d3329b1f31ad8cc7737ca43321bf248
 vendor/lib64/libdsi_netctrl.so|420e68f5bffabe3ed5211e934f326438c01a6eff
 vendor/lib64/libdsutils.so|d34fe6b4ea8be170eabc5e9d12704469b73d8aff
-vendor/lib64/libembmsservice.so|77a5db7bd769880f81c6c13a98542ae8c2a0a461
 vendor/lib64/libnetmgr.so|14765c5d4e0428bc9633f90117452de20424dcc9
 vendor/lib64/libnetmgr_common.so|74dbc50f23d1c2017f2a55b0f499c5065008ce3a
 vendor/lib64/libnetmgr_nr_fusion.so|42002bbcacd2aaa69c8bd6f8d26c0d9c706c841f
@@ -605,10 +602,6 @@ vendor/lib64/libnlnetmgr.so|dd45de1fc2b1ea255ac469137dd358118a156a75
 vendor/lib64/libqcmaputils.so|b78eda43463af19b88485236a94eab4af3f9a680
 vendor/lib64/libqdi.so|8778fb2ee9512872898f3afc5fe560b605983ba6
 vendor/lib64/libqdp.so|a5fa81e178350744d829fc3e5b59512e9c418920
-vendor/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so|ea1c0003f7ac057e67ca8a49cc1a25a7287c2a95
-vendor/lib64/vendor.qti.hardware.embmssl@1.0.so|e4fc8e5b0e7e9c609ed8c78309c3d6d86a131802
-vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so|86a03bcc9a34bff0bd29f6c862da248fb81d7d55
-vendor/lib64/vendor.qti.hardware.embmssl@1.1.so|a4f353cac95f9cf034a5a91fe6419f6fb85f3d70
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|21f382e07844ec79b33950ec00f6a1bcd9a33611
 
 # Display (SDM) - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
