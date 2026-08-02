@@ -471,7 +471,9 @@ $(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk
 # VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so \
+    hardware/lineage/compat/vndk/v34/arm/libaudioroute-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioroute-v34.so
+    
 
 # WiFi
 PRODUCT_COPY_FILES += \
