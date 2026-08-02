@@ -42,8 +42,8 @@ vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
@@ -53,7 +53,6 @@ vendor/lib/hw/com.dsi.ant@1.0-impl.so|fa12fdaeb9d7f162ff14edcad57963f771f3002f
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|ecdf9f24262c49031c470b14a27d3f99d2b47ff4
 
 # Audio-ACDB
-vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_General_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_Global_cal.acdb
@@ -62,6 +61,7 @@ vendor/etc/acdbdata/Tutu/Tutu_Hdmi_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_Headset_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_Speaker_cal.acdb
 vendor/etc/acdbdata/Tutu/Tutu_workspaceFile.qwsp
+vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Audio
 vendor/lib/hw/audio.primary.kona.so
@@ -218,8 +218,8 @@ vendor/lib64/vendor.qti.latency@2.1.so|963bf507c24a29014cba5065d00c97b91f61e804
 # CVP - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/lib64/libcvp2.so|dde388db38b8f3dcf0018b7ed29870418119eb94
 vendor/lib64/libcvp2_hfi.so|87a89ac07b141ccac7051c809741317034023ad7
-vendor/lib64/libcvpcpuRev_skel.so|ea7b8fd0dd563e68ef8debb9c15701a94a1b4b38
 vendor/lib64/libcvp_common.so|f702d19f14e018a74302f7e9b956b3ea2c505c61
+vendor/lib64/libcvpcpuRev_skel.so|ea7b8fd0dd563e68ef8debb9c15701a94a1b4b38
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so|011cb17f3eedb9b1fa72cbb0f2017976e303f4dc
 
 # Camera
@@ -325,8 +325,8 @@ vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera-arcsoft
 vendor/lib64/libarcsoft_beautyshot.so
-vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
 vendor/lib64/libarcsoft_hdr_detection.so
+vendor/lib64/libarcsoft_hdrplus_hvx_stub.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
 vendor/lib64/libarcsoft_mf_superresolution.so
 vendor/lib64/libarcsoft_portrait_lighting.so
@@ -336,8 +336,8 @@ vendor/lib64/libarcsoft_super_night_raw.so
 # Camera components
 vendor/lib64/camera/components/com.arcsoft.node.smoothtransition.so
 vendor/lib64/camera/components/com.facepp.node.siq.so
-vendor/lib64/camera/components/com.mi.node.aiasd.so
 vendor/lib64/camera/components/com.mi.node.AIIE.so
+vendor/lib64/camera/components/com.mi.node.aiasd.so
 vendor/lib64/camera/components/com.mi.node.hdr.so
 vendor/lib64/camera/components/com.mi.node.mimovie.so
 vendor/lib64/camera/components/com.mi.node.realtimebokeh.so
@@ -393,12 +393,23 @@ vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/components/libubifocus.so
 
 # Camera-configs
-vendor/etc/camera/mibokeh_855_opencl.bin
-vendor/etc/camera/mibokeh_855_parameter.bin
-vendor/etc/camera/model_front_mibokeh_video.dlc
+vendor/etc/camera/model/cap_model/capture_cache
+vendor/etc/camera/model/cap_model/capture_model
+vendor/etc/camera/model/cap_model/capture_policy
+vendor/etc/camera/model/ldc_model/ldc_cap_cache
+vendor/etc/camera/model/ldc_model/ldc_cap_model
+vendor/etc/camera/model/ldc_model/ldc_cap_policy
+vendor/etc/camera/model/rt_model/preview_cache
+vendor/etc/camera/model/rt_model/preview_model
+vendor/etc/camera/model/rt_model/preview_policy
+vendor/etc/camera/model/dof_l11r_mecp.bin
+vendor/etc/camera/CFR_para_T_2x_V03.bin
+vendor/etc/camera/CFR_para_UW_V03.bin
+vendor/etc/camera/CFR_para_W_V03.bin
+vendor/etc/camera/GpuKernelRepo.pb
+vendor/etc/camera/ai_enhance.dlc
 vendor/etc/camera/aivsModels1
 vendor/etc/camera/aivsParams
-vendor/etc/camera/ai_enhance.dlc
 vendor/etc/camera/almalence_sr_params_tele.config
 vendor/etc/camera/almalence_sr_params_tele4x.config
 vendor/etc/camera/almalence_sr_params_tele4x_iso100.config
@@ -420,9 +431,6 @@ vendor/etc/camera/beauty_style_pink.cng
 vendor/etc/camera/beauty_style_skin_gloss.cng
 vendor/etc/camera/bokehParams.json
 vendor/etc/camera/camxoverridesettings.txt
-vendor/etc/camera/CFR_para_T_2x_V03.bin
-vendor/etc/camera/CFR_para_UW_V03.bin
-vendor/etc/camera/CFR_para_W_V03.bin
 vendor/etc/camera/com.xiaomi.dcal.wu.fake
 vendor/etc/camera/com.xiaomi.dcal.wu.golden
 vendor/etc/camera/com.xiaomi.dcal.wu.golden2
@@ -430,24 +438,16 @@ vendor/etc/camera/det_quantize.dlc
 vendor/etc/camera/eisoverridesettings.txt
 vendor/etc/camera/goturn_search_dsp.dlc
 vendor/etc/camera/goturn_target_dsp.dlc
-vendor/etc/camera/GpuKernelRepo.pb
 vendor/etc/camera/hdrcheckerparamsettings.yml
 vendor/etc/camera/hdrd_ui9_params.config
 vendor/etc/camera/intsense_config_undistort.bin
 vendor/etc/camera/miai_hdr_config.yaml
 vendor/etc/camera/miai_psn_config.yaml
-vendor/etc/camera/model/cap_model/capture_cache
-vendor/etc/camera/model/cap_model/capture_model
-vendor/etc/camera/model/cap_model/capture_policy
-vendor/etc/camera/model/dof_l11r_mecp.bin
-vendor/etc/camera/model/ldc_model/ldc_cap_cache
-vendor/etc/camera/model/ldc_model/ldc_cap_model
-vendor/etc/camera/model/ldc_model/ldc_cap_policy
-vendor/etc/camera/model/rt_model/preview_cache
-vendor/etc/camera/model/rt_model/preview_model
-vendor/etc/camera/model/rt_model/preview_policy
+vendor/etc/camera/mibokeh_855_opencl.bin
+vendor/etc/camera/mibokeh_855_parameter.bin
 vendor/etc/camera/model_back.dlc
 vendor/etc/camera/model_front.dlc
+vendor/etc/camera/model_front_mibokeh_video.dlc
 vendor/etc/camera/reid_float.dlc
 vendor/etc/camera/sceneDetection.xml
 vendor/etc/camera/seg_quantized.dlc
@@ -547,11 +547,11 @@ vendor/lib64/libdpmqmihal.so|67a75d6bd39f4bc825e14d21fa5b61e26ac82b22
 # DRM - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|d3d6ed383483747f8bec574adcac1c24ef1ac3a4
 vendor/bin/ssgtzd|1d906a379edc6df57aef7c3c2c55e285596ba8f7
-vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/etc/init/ssgtzd.rc|140086da548acd74420c8f494c3351b4dedc1c80
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
 vendor/etc/ssg/ta_config.json|e18554b038da3737b7352d1271e5fde9c789c9df
 vendor/etc/ssg/tz_whitelist.json|c0dc4f4cfee20db5993eb5142e362cba7dfaecd6
+vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|6825e9396f6e04d4739ca6dbeecd69502c01fa8a
 vendor/lib64/libpvr.so|66eb207b47f32bb157b296edc2b8ff864c63eb02
 vendor/lib64/librmp.so|96741cb9f27a80b5cc2535abaa305ac0970584c9
@@ -570,10 +570,10 @@ vendor/lib64/libhdcpsrm.so|e419c107da4919b898a6917396e8930ebc9de5d0
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/libwvkeybox.so
-vendor/lib64/mediadrm/libwvdrmengine.so
 
 # Data - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/ATFWD-daemon|94af1767c77ed9835cbb66b0ba729b71e0044e1a
@@ -870,7 +870,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|2da21120fba88065
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so|4f3784cd6a294f0b2e4b428ffc599a0fa169cb50
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|b157c449d868278163677c96e4081dc2f12bfefb
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|982c644c6016736d4abd02ede62b63d6b661ae38
-vendor/radio/qcril_database/qcril.db|5256b3d5cce46578507abc978c4be1febcf513b9
 vendor/radio/qcril_database/upgrade/0_initial.sql|e00b243261d8941802bdea9d4e659dc5e927c216
 vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql|1ca05b047116cbc776f71d3bdba4952b18b04229
 vendor/radio/qcril_database/upgrade/11_version_update_ecc_table.sql|ab2580e3e25fb02936eb760cba85f3b6139b8d34
@@ -883,6 +882,7 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb489
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da2876b87b214579c9d74ae92d218d7
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql|a0603a5c46e8e67f78bdb42f2b246ecc6a37cecd
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql|4701219a79190995eda651e5c45e11c9b111a478
+vendor/radio/qcril_database/qcril.db|5256b3d5cce46578507abc978c4be1febcf513b9
 
 # Radio-IMS - from LA.UM.9.12.r1-14400-SMxx50.QSSI12.0
 vendor/bin/ims_rtp_daemon|66ca2f2c1888d7d4fb2eb97554fc4966246058a2
@@ -975,7 +975,6 @@ vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensor-configs
-vendor/etc/sensors/calibratedCheck.json
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bu27030_0_back.json
 vendor/etc/sensors/config/lsm6dso_0.json
@@ -1016,6 +1015,7 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sx932x_0.json
 vendor/etc/sensors/config/sx933x_0.json
 vendor/etc/sensors/config/tcs3701.json
+vendor/etc/sensors/calibratedCheck.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/judge_calibrated.json
 vendor/etc/sensors/sensor_diag.cfg
@@ -1030,8 +1030,8 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/elliptic_sensor.xml
 vendor/lib64/libnotifyaudiohal.so
-vendor/lib64/libsensorcal.so
 vendor/lib64/libsensor_cal_v2.so
+vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
