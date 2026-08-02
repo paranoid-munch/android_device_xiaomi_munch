@@ -157,7 +157,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    XiaomiParts \
+    DolbyAtmos
 
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
