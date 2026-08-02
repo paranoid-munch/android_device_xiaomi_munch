@@ -6,10 +6,13 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 import android.widget.Toast;
+import android.util.Log;
+
 import co.aospa.settings.R;
 import co.aospa.settings.utils.FileUtils;
 
 public class HBMModeSwitch implements OnPreferenceChangeListener {
+    private static final String TAG = "HBMModeSwitch";
     private static final String DC_DIMMING_KEY = "dc_dimming";
     private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     private static final String BACKLIGHT_NODE = "/sys/class/backlight/panel0-backlight/brightness";
@@ -20,17 +23,11 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
     }
 
     public static String getHBM() {
-        if (FileUtils.isFileWritable(HBM_NODE)) {
-            return HBM_NODE;
-        }
-        return null;
+        return HBM_NODE;
     }
 
     public static String getBACKLIGHT() {
-        if (FileUtils.isFileWritable(BACKLIGHT_NODE)) {
-            return BACKLIGHT_NODE;
-        }
-        return null;
+        return BACKLIGHT_NODE;
     }
 
     @Override
@@ -49,6 +46,9 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
             ).show();
             return false;
         }
+
+        String hbmPath = getHBM();
+        String backlightPath = getBACKLIGHT();
 
         if (enabled) {
             // Save current brightness and auto brightness mode
@@ -74,15 +74,22 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
                     Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
             );
 
-            FileUtils.writeLine(getHBM(), "1");
-            FileUtils.writeLine(getBACKLIGHT(), "2047");
+            if (hbmPath != null) {
+                FileUtils.writeLine(hbmPath, "1");
+            }
+            if (backlightPath != null) {
+                FileUtils.writeLine(backlightPath, "2047");
+            }
+
             Settings.System.putInt(
                     mContext.getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS,
                     255
             );
         } else {
-            FileUtils.writeLine(getHBM(), "0");
+            if (hbmPath != null) {
+                FileUtils.writeLine(hbmPath, "0");
+            }
 
             // Restore brightness
             int lastBrightness = prefs.getInt("last_brightness", 128);
