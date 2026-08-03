@@ -62,10 +62,6 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/hidl/manifest.xml \
     $(DEVICE_PATH)/configs/hidl/xiaomi_manifest.xml
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_munch
-TARGET_RECOVERY_DEVICE_MODULES := libinit_munch
-
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
