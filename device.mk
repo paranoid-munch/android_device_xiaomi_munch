@@ -303,22 +303,53 @@ $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,fal
 
 # Logging
 SPAMMY_LOG_TAGS := \
+    AiAiEcho \
+    AiAiTextClassifier \
+    BaseDepthController \
+    GraphicsEnvironment \
+    Diag_Lib \
+    CCodec \
+    CCodecBuffers \
+    CCodecConfig \
+    Codec2Client \
     MiStcImpl \
     SDM \
     SDM-histogram \
     SRE \
     WifiHAL \
+    WifiService \
     cnss-daemon \
     libcitsensorservice@2.0-impl \
     libsensor-displayalgo \
     libsensor-parseRGB \
     libsensor-ssccalapi \
+    CameraService \
+    ForegroundUtils \
     sensors \
     sensors-hal \
+    a2dp_offload \
+    bluetooth-a2dp \
+    BluetoothMetrics \
     vendor.qti.bluetooth@1.0-ibs_handler \
+    vendor.qti.bluetooth@1.0-patch_dl_manager \
     vendor.qti.bluetooth@1.0-wake_lock \
     vendor.qti.hardware.display.composer-service \
-    vendor.xiaomi.sensor.citsensorservice@2.0-service
+    vendor.xiaomi.sensor.citsensorservice@2.0-service \
+    DisplayManagerService \
+    DisplayModeController \
+    FrameTracker \
+    QC2GrallocBuffer \
+    tftp_server \
+    LOWI-9.0.1.89.z \
+    wpa_supplicant \
+    InetDiagMessage \
+    QtiCarrierConfigHelper \
+    DeviceStatisticsService \
+    DeviceInfoHidlClient \
+    NearbyDiscovery \
+    NearbyPresence \
+    NearbySharing \
+    GmsClient
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
