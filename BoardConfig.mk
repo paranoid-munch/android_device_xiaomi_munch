@@ -63,8 +63,8 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/hidl/xiaomi_manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB ?= //$(DEVICE_PATH):init_xiaomi_kona
-TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_kona
+TARGET_INIT_VENDOR_LIB ?= //$(DEVICE_PATH):init_xiaomi_munch
+TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_munch
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
