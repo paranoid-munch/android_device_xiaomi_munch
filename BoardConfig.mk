@@ -64,7 +64,6 @@ DEVICE_MANIFEST_FILE += \
 
 # Init
 TARGET_INIT_VENDOR_LIB ?= //$(DEVICE_PATH):init_xiaomi_munch
-TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_munch
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
