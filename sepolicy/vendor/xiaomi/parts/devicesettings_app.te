@@ -1,6 +1,12 @@
 type devicesettings_app, domain;
 typeattribute devicesettings_app mlstrustedsubject;
 
-# Allow devicesettings_app to read and write vendor_sysfs_graphics
+allow devicesettings_app vendor_sysfs_graphics:file write;
+r_dir_file(devicesettings_app, vendor_sysfs_graphics)
+
+# Allow DeviceSettings to get settingsdebug.instant.packages prop
+get_prop(devicesettings_app, settingslib_prop)
+
+# Allow devicesettings_app to operate with vendor_sysfs_graphics
 r_dir_file(devicesettings_app, vendor_sysfs_graphics)
 allow devicesettings_app vendor_sysfs_graphics:file w_file_perms;
