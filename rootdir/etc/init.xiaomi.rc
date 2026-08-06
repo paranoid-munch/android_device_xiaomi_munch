@@ -47,7 +47,7 @@ on post-fs-data
 
     mkdir /mnt/vendor/persist/fpc 0770 system system
     mkdir /mnt/vendor/persist/goodix 0770 system system
-
+    
 # Hardware revision
 on property:ro.boot.hwlevel=*
     setprop ro.boot.hardware.revision ${ro.boot.hwc}_${ro.boot.hwlevel}_${ro.boot.hwversion}
@@ -79,7 +79,7 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     group nfc
     disabled
 
-on boot && property:ro.boot.product.hardware.sku=nfc
+on boot
     enable qti_esepowermanager_service_1_1
     enable secureelement-hal_1_2
     enable vendor.nfc_hal_service
