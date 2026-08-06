@@ -112,6 +112,7 @@ TARGET_BOARD_PLATFORM := kona
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
 # Recovery
@@ -147,9 +148,6 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
-ODM_MANIFEST_SKUS += nfc
-ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
-
 
 # Inherit the proprietary files
 include vendor/xiaomi/munch/BoardConfigVendor.mk
