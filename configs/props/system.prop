@@ -48,6 +48,7 @@ ro.netflix.bsp_rev=Q8250-19134-1
 
 # Nfc
 ro.boot.hardware.sku=munch
+ro.nfc.port=I2C
 
 # Feature flags
 persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false

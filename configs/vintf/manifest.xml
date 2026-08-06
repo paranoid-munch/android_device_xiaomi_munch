@@ -29,9 +29,6 @@
         <transport>hwbinder</transport>
         <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
-    <hal format="aidl" override="true">
-        <name>android.hardware.nfc</name>
-    </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
@@ -46,9 +43,6 @@
         <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
-    </hal>
-    <hal format="aidl" override="true">
-        <name>vendor.nxp.nxpnfc_aidl</name>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
@@ -184,11 +178,6 @@
         <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::ISecureElement/SIM1</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IOffloadConfig/default</fqname>
@@ -267,5 +256,15 @@
         <name>vendor.xiaomi.hardware.touchfeature</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ITouchFeature/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ISecureElement/eSE1</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.esepowermanager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IEsePowerManager/default</fqname>
     </hal>
 </manifest>
