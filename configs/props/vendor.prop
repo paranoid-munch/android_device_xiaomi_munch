@@ -198,8 +198,6 @@ drm.service.enabled=true
 
 # Fingerprint
 persist.vendor.qfp=false
-persist.vendor.fingerprint.sensor_location=1080|965|115|local:4630946736638489729
-persist.vendor.fingerprint.type=side
 
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true

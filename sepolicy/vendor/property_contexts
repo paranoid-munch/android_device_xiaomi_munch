@@ -20,7 +20,6 @@ vendor.camera.sensor.                                                           
 
 # Fingerprint
 vendor.gf.debug.                                                                                    u:object_r:vendor_fingerprint_prop:s0
-persist.vendor.fingerprint.                                                                         u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.fpc.                                                                                 u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.sys.fp.                                                                              u:object_r:vendor_fingerprint_prop:s0
 ro.boot.fpsensor                                                                                    u:object_r:vendor_fingerprint_prop:s0
