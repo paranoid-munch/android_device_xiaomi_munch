@@ -132,9 +132,6 @@ vendor.audio.adm.buffering.ms=6
 vendor.audio.offload.buffer.size.kb=32
 vendor.audio_hal.period_multiplier=3
 
-# Audio hardware
-ro.hardware.audio.primary=munch
-
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
