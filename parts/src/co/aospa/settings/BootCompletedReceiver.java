@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings;
+package co.aospa.settings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -26,8 +26,8 @@ import android.os.SystemProperties;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.thermal.ThermalUtils;
-import org.lineageos.settings.utils.FileUtils;
+import co.aospa.settings.thermal.ThermalUtils;
+import co.aospa.settings.utils.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 

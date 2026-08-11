@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.sensors;
+package co.aospa.settings.sensors;
 
 import android.content.Context;
 import android.hardware.Sensor;

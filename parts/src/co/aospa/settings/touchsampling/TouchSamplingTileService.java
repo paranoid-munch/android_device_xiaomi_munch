@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.touchsampling;
+package co.aospa.settings.touchsampling;
 
 import android.content.SharedPreferences;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.utils.FileUtils;
+import co.aospa.settings.utils.FileUtils;
 
 public class TouchSamplingTileService extends TileService {
 

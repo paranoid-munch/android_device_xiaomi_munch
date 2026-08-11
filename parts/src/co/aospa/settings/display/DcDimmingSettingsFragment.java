@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.touchsampling;
+package co.aospa.settings.display;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -23,33 +23,33 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreferenceCompat;
 
-import org.lineageos.settings.R;
-import org.lineageos.settings.utils.FileUtils;
+import co.aospa.settings.R;
+import co.aospa.settings.utils.FileUtils;
 
-public class TouchSamplingSettingsFragment extends PreferenceFragment implements
+public class DcDimmingSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private SwitchPreferenceCompat mTouchSamplingPreference;
-    private static final String HTSR_ENABLE_KEY = "htsr_enable";
-    private static final String HTSR_FILE = "/sys/devices/virtual/touch/touch_dev/bump_sample_rate";
+    private SwitchPreferenceCompat mDcDimmingPreference;
+    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
+    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.htsr_settings);
-        mTouchSamplingPreference = (SwitchPreferenceCompat) findPreference(HTSR_ENABLE_KEY);
-        if (FileUtils.fileExists(HTSR_FILE)) {
-            mTouchSamplingPreference.setEnabled(true);
-            mTouchSamplingPreference.setOnPreferenceChangeListener(this);
+        addPreferencesFromResource(R.xml.dcdimming_settings);
+        mDcDimmingPreference = (SwitchPreferenceCompat) findPreference(DC_DIMMING_ENABLE_KEY);
+        if (FileUtils.fileExists(DC_DIMMING_NODE)) {
+            mDcDimmingPreference.setEnabled(true);
+            mDcDimmingPreference.setOnPreferenceChangeListener(this);
         } else {
-            mTouchSamplingPreference.setSummary(R.string.htsr_enable_summary_not_supported);
-            mTouchSamplingPreference.setEnabled(false);
+            mDcDimmingPreference.setSummary(R.string.dc_dimming_enable_summary_not_supported);
+            mDcDimmingPreference.setEnabled(false);
         }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (HTSR_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.writeLine(HTSR_FILE, (Boolean) newValue ? "1" : "0");
+        if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
+            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "1":"0");
         }
         return true;
     }

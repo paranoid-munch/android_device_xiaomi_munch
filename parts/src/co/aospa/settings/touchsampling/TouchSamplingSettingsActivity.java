@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.touchsampling;
+package co.aospa.settings.touchsampling;
 
 import android.os.Bundle;
 
