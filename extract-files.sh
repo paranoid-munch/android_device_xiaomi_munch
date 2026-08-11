@@ -75,9 +75,8 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libaudioroute.so" "libaudioroute-v34.so" "${2}"
             ;;
-        vendor/lib/hw/audio.primary.munch.so)
+        vendor/lib/hw/audio.primary.kona.so)
             [ "$2" = "" ] && return 0
-            sed -i 's|/vendor/lib/liba2dpoffload.so|liba2dpoffload_munch.so\x00\x00\x00\x00\x00\x00|g' "${2}"
             "${PATCHELF}" --replace-needed "libaudioroute.so" "libaudioroute-v34.so" "${2}"
             ;;
         vendor/lib64/camera/components/com.mi.node.watermark.so)
