@@ -50,6 +50,11 @@ public final class ThermalUtils {
     private static final String THERMAL_GAMING = "thermal.gaming=";
     private static final String THERMAL_STREAMING = "thermal.streaming=";
 
+    private static final String[] THERMAL_PROFILE_PREFIXES = {
+            THERMAL_BENCHMARK, THERMAL_BROWSER, THERMAL_CAMERA,
+            THERMAL_DIALER, THERMAL_GAMING, THERMAL_STREAMING
+    };
+
     private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
 
     private SharedPreferences mSharedPrefs;
@@ -73,9 +78,18 @@ public final class ThermalUtils {
         String value = mSharedPrefs.getString(THERMAL_CONTROL, null);
 
         if (value != null) {
-             String[] modes = value.split(":");
-             if (modes.length < 5) value = null;
-         }
+            String[] modes = value.split(":", -1);
+            if (modes.length != THERMAL_PROFILE_PREFIXES.length) {
+                value = null;
+            } else {
+                for (int i = 0; i < modes.length; i++) {
+                    if (!modes[i].startsWith(THERMAL_PROFILE_PREFIXES[i])) {
+                        value = null;
+                        break;
+                    }
+                }
+            }
+        }
 
         if (value == null || value.isEmpty()) {
             value = THERMAL_BENCHMARK + ":" + THERMAL_BROWSER + ":" + THERMAL_CAMERA + ":" +
