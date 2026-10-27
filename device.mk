@@ -402,6 +402,7 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AOSPAMunchFrameworksOverlay \
     MunchCarrierConfig \
     MunchFrameworksRes \
     MunchSettingsOverlay \
