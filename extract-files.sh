@@ -20,24 +20,18 @@ ANDROID_ROOT="${MY_DIR}/../../.."
 # Can still be used with broken XML files by using blob_fixup
 export TARGET_DISABLE_XML_FIXING=true
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
-if [ ! -f "${HELPER}" ]; then
-    echo "Unable to find helper script at ${HELPER}"
-    exit 1
-fi
-source "${HELPER}"
-
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
-ONLY_FIRMWARE=
+SRC=
 KANG=
 SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         --only-firmware)
-            ONLY_FIRMWARE=true
+            echo "Firmware-only extraction is not supported by this device tree" >&2
+            exit 2
             ;;
         -n | --no-cleanup)
             CLEAN_VENDOR=false
@@ -46,11 +40,23 @@ while [ "${#}" -gt 0 ]; do
             KANG="--kang"
             ;;
         -s | --section)
+            if [ "${#}" -lt 2 ] || [ -z "${2}" ] || [[ "${2}" == -* ]]; then
+                echo "Missing section name for ${1}" >&2
+                exit 2
+            fi
             SECTION="${2}"
             shift
             CLEAN_VENDOR=false
             ;;
+        -*)
+            echo "Unknown option: ${1}" >&2
+            exit 2
+            ;;
         *)
+            if [ -n "${SRC}" ]; then
+                echo "Only one extraction source may be specified" >&2
+                exit 2
+            fi
             SRC="${1}"
             ;;
     esac
@@ -60,6 +66,13 @@ done
 if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
+
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+if [ ! -f "${HELPER}" ]; then
+    echo "Unable to find helper script at ${HELPER}"
+    exit 1
+fi
+source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
@@ -145,8 +158,6 @@ function blob_fixup_dry() {
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-if [ -z "${ONLY_FIRMWARE}" ]; then
-    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-fi
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
