@@ -6,4 +6,50 @@
 
 #include <libvariant.h>
 
-const std::vector<variant_info> variants;
+static const variant_info munch_in_info = {
+    .hwc_value = "INDIA",
+    .sku_value = "",
+
+    .brand = "POCO",
+    .device = "munch",
+    .marketname = "POCO F4",
+    .mod_device = "munch_in_global",
+    .model = "22021211RI",
+    .build_fingerprint = "POCO/munch_in/munch:13/RKQ1.211001.001/V816.0.12.0.ULMMIXM:user/release-keys",
+
+    .nfc = true,
+};
+
+static const variant_info munch_global_info = {
+    .hwc_value = "GLOBAL",
+    .sku_value = "",
+
+    .brand = "POCO",
+    .device = "munch",
+    .marketname = "POCO F4",
+    .mod_device = "munch_global",
+    .model = "22021211RG",
+    .build_fingerprint = "POCO/munch_global/munch:13/RKQ1.211001.001/V816.0.12.0.ULMMIXM:user/release-keys",
+
+    .nfc = true,
+};
+
+static const variant_info munch_info = {
+    .hwc_value = "",
+    .sku_value = "",
+
+    .brand = "Redmi",
+    .device = "munch",
+    .marketname = "Redmi K40S",
+    .mod_device = "munch_global",
+    .model = "22021211RC",
+    .build_fingerprint = "Redmi/munch/munch:13/RKQ1.211001.001/V816.0.12.0.ULMMIXM:user/release-keys",
+
+    .nfc = true,
+};
+
+const std::vector<variant_info> variants = {
+    munch_in_info,
+    munch_global_info,
+    munch_info,
+};
