@@ -1,3 +1,58 @@
+# Повторная проверка и расширенные исправления DT
+
+Второй проход по запросу владельца: проверены product lists и локальные пути, Blueprint producers, Java-код XiaomiParts, init/ueventd, shell/Python utilities, XML/JSON, properties, SELinux context keys, audio references и структура power profile. Дерево остаётся только для munch. Новых внешних репозиториев не скачивалось; аппаратные возможности не менялись по гипотезам.
+
+## Дополнительные коммиты
+
+| Коммит | Изменение и доказательство |
+|---|---|
+| `6ee1270` | **MEDIUM, build robustness:** `device.mk:7` задаёт `LOCAL_PATH := device/xiaomi/munch` явно, без зависимости от my-dir в product-контексте. После внешних наследований путь восстанавливается для непосредственных и отложенных ссылок. Проверены audio/camera/permissions/public-libraries/Wi-Fi sources, Soong namespace и libinit module |
+| `61e8098` | **LOW, cleanup:** literal PRODUCT_PACKAGES и log tag lists отсортированы внутри разделов; убран повтор `libvndfwk_detect_jni.qti.vendor`, исправлен trailing continuation audio.usbv2. Множество пакетов совпадает с исходным, порядок inheritance сохранён |
+| `acb0133` | **MEDIUM, latent logic bug:** `ThermalUtils.java:103-112,142-150` разбирает полные comma-delimited имена пакетов. Раньше `contains`/`replace` для `com.example` могли выбрать профиль или удалить суффикс из `org.com.example` |
+| `5abb463` | **MEDIUM, lifecycle/race:** `ThermalService.java:39-126` инициализирует helpers до регистрации listener, выполняет task callbacks на main handler, снимает listener/receiver и pending callbacks при destroy. После screen on возвращается текущий профиль; task callback во сне не включает его заново |
+| `307e15e` | **MEDIUM, UI robustness:** `ThermalSettingsFragment.java:95-116,153-174,325-352` связывает ApplicationsState session с resume/pause, принимает CharSequence labels, исключает бесконечное repost divider для отсутствующего preference list, привязывает spinner entry до callback и проверяет null. Убраны неработающее сравнение AppEntry со String и повторное notify |
+| `55d9ed1` | **LOW, component boundary:** внутренний ThermalService больше не exported; удалена ссылка на необъявленную permission. Собственный explicit start сохранён |
+| `53bfd2d` | **LOW, latent native bug:** `libinit/libinit_dalvik_heap.cpp:64-71` проверяет ошибку sysinfo и учитывает mem_unit. Без этого возможны использование неинициализированной структуры или неправильный tier при единицах, отличных от байта |
+| `62263ec` | **LOW, init cleanup:** удалён mkdir на read-only `/vendor/data/tombstones`, штатный `/data/vendor/tombstones` остаётся. Убраны повторные ultrasound/FPC commands и chmod до mount persist; существующее назначение после mount сохранено |
+| `680cd7f` | **LOW, input validation:** Bluetooth MAC script проверяет успешное чтение ровно шести байт и результат setprop; не записывает пустой/неверный адрес при ошибке. Значения реальных адресов не использовались |
+| `1c3080c` | **MEDIUM, extraction tool:** аргументы проверяются до setup_vendor. Неподдерживаемый `--only-firmware`, неизвестные flags, missing section и несколько sources завершаются до потенциальной очистки output. Ранее firmware-only пропускал extract, но всё равно вызывал setup/vendor generation |
+| `2fb09a6` | **LOW, tooling:** reorder-libs.py использует Python 3 и собственный каталог, чтобы запуск из другого cwd не сортировал чужой proprietary-files.txt |
+| `7ff721c` | **INFORMATIONAL:** EOF newlines и мелкое BP/XML formatting без изменения значений |
+| `24ef44b` | **LOW, cleanup:** удалены два идентичных WCNSS ueventd rules, ownership и mode сохранены |
+
+Все 13 коммитов содержат `Co-authored-by: Codex <codex@openai.com>`. Эти ошибки подтверждены анализом исходников/контрольными сценариями; их проявление на телефоне не утверждается без runtime-теста.
+
+## Проверки второго прохода
+
+* Все 48 XML и JSON разобраны; 9 shell scripts проходят bash -n, Python utility проходит syntax parse.
+* Нет повторяющихся локальных property keys, Soong module names или SELinux context keys. Это не полная compilation Android policy.
+* Все literal package lists отсортированы, после удаления одного дубликата множество PRODUCT_PACKAGES сохранено.
+* Основные mixer path references разрешаются, имена путей уникальны отдельно в каждом mixer XML; длины CPU speed/power arrays совпадают.
+* Native harness компилирует реальный Dalvik heap selector с -Wall -Wextra -Werror: sysinfo failure, mem_unit=1/1024 и tiers 2/4/6 GiB проходят.
+* Java harness компилирует реальные ThermalUtils и ThermalService отдельно со stub Android APIs: повреждённые preferences, семь состояний, полные package names, reassignment/removal, queued callbacks, screen off/on и late callbacks после destroy проходят.
+* Для ThermalSettingsFragment выполнены source-contract проверки и тест CharSequence, не полная компиляция Android UI. Это ограничение важно: SDK, SettingsLib и AOSPA resources в checkout отсутствуют.
+* Bluetooth shell flow проверен на синтетических байтах и mocked xxd/setprop, включая ошибки чтения/записи. Первый запуск host harness выявил отсутствие xxd в окружении; после его явной подмены контрольные сценарии прошли. Реальный xxd/Android shell здесь не тестировался.
+* Extraction CLI проверен в отдельном временном mock tree: неверные аргументы не вызывают helper, корректные сохраняют source/section/cleanup. Реальные vendor files не извлекались и не удалялись.
+* Reorder utility проверена на отдельном fixture: выбирает файл рядом со скриптом и идемпотентна, чужой cwd не изменён.
+* git diff --check проходит. Полная Android/Soong сборка, VINTF check и аппаратные тесты остаются недоступны.
+
+### Регрессионная проверка product paths
+
+После сообщения владельца о `/configs/audio/` и `outside of the source root` обнаружен дефект первоначального host harness: он определял my-dir вручную и не проверял контекст, в котором эта функция отсутствует. В текущей истории исправляющий коммит использует явный LOCAL_PATH. Новый GNU Make fixture не определяет my-dir, моделирует изменение LOCAL_PATH каждым inherit-product и реально перечисляет audio-файлы в временном Android-подобном дереве. Все перечисленные copy sources, namespace и init module проверяются; сценарий с посторонним my-dir также проходит. Полная сборка AOSPA по-прежнему не запускалась.
+
+## Новые ограничения и оставшиеся вопросы
+
+1. `rootdir/etc/ueventd.qcom.rc:64,354`: один glob `/dev/iio:device*` имеет modes 0664 и 0660. В отличие от идентичных WCNSS entries, это конфликт значений. Нужны effective mode на устройстве, потребители IIO и поведение ueventd конкретной сборки; пока не выбирается режим наугад.
+2. В `configs/public.libraries.txt` есть библиотеки/ABI, не представленные локальным proprietary list, например 32-bit libcvp2 и некоторые camera libraries. Они могут приходить из общих QTI/MIUI camera репозиториев. Перед удалением/правкой нужен installed-files и linker namespace из полного образа.
+3. `parts` ссылается на `@mipmap/ic_launcher` и `@string/device_settings_app_name`, отсутствующие локально, но module зависит от `co.aospa.resources`. Это не доказательство missing resource без доступной static library; имена не заменялись.
+4. `ProximitySensor`/`SensorsUtils` не имеют локальных вызывающих классов. Их legacy helpers не объявляются причиной реальных sensor ошибок. Не удалены вместе с аппаратными features.
+5. Политики SELinux просмотрены и проверены на локальные дубликаты; нет оснований добавлять allow по отсутствующим AVC. checkpolicy установлен, но общего policy/m4 inputs нет, поэтому отдельный .te невозможно осмысленно скомпилировать как готовую Android policy.
+6. Вопросы Wi-Fi HAL capabilities, RKP/ID attestation, audio PCM/ACDB, AVB signing, kernel/BPF, broad DAC writers остаются на разделяющих проверках из исходного аудита. Сортировка пакетов и cleanup не подтверждают их устранение.
+
+Следующий технический этап — собрать AOSPA на получившихся коммитах, проверить merged resources/VINTF/installed-files и выполнить указанные hardware сценарии. Исходный подробный аудит ниже сохранён как история состояния до исправлений; текущие статусы находятся в верхних разделах.
+
+---
+
 # Выполненные исправления munch CLO DT
 
 Обновление 2026-10-28 после разрешения владельца на исправления. Дерево предназначено только для munch, включая его варианты POCO F4 / Redmi K40S. Варианты не удалены; fingerprints, provisioning identity и параметры NFC сохранены.
