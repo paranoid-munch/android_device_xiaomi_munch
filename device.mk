@@ -93,9 +93,9 @@ $(call soong_config_set,tinycompress,enable_extended_compress_format,true)
 $(call soong_config_set,tinycompress,loop_compress_read,true)
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
+    android.hardware.audio@6.0-impl \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.soundtrigger@2.3-impl \
     libaudioroute-v34
@@ -104,7 +104,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.kona \
     audio.r_submix.default \
-    audio.usbv2.default \
+    audio.usbv2.default
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
@@ -159,10 +159,10 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
-    libpiex_shim \
     libcamera2ndk_vendor \
     libgui_vendor \
     liblz4.vendor \
+    libpiex_shim \
     libstdc++_vendor \
     libutilscallstack.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
@@ -193,7 +193,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    vendor.qti.hardware.display.allocator-service \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
     libqdMetaData \
@@ -202,10 +201,11 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     libvulkan \
-    vendor.display.config@1.5 \
     vendor.display.config@1.11.vendor \
+    vendor.display.config@1.5 \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
@@ -220,9 +220,9 @@ TARGET_USE_AIDL_QTI_MEMTRACK := true
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
+    android.hardware.drm@1.4.vendor \
     libcrypto_shim \
-    libcrypto_shim.vendor \
-    android.hardware.drm@1.4.vendor
+    libcrypto_shim.vendor
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -256,7 +256,7 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
-# HotwordEnrollement app permissions
+# Hotword enrollment app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
@@ -300,50 +300,50 @@ SPAMMY_LOG_TAGS := \
     AiAiEcho \
     AiAiTextClassifier \
     BaseDepthController \
-    GraphicsEnvironment \
-    Diag_Lib \
+    BluetoothMetrics \
     CCodec \
     CCodecBuffers \
     CCodecConfig \
+    CameraService \
     Codec2Client \
+    DeviceInfoHidlClient \
+    DeviceStatisticsService \
+    Diag_Lib \
+    DisplayManagerService \
+    DisplayModeController \
+    ForegroundUtils \
+    FrameTracker \
+    GmsClient \
+    GraphicsEnvironment \
+    InetDiagMessage \
+    LOWI-9.0.1.89.z \
     MiStcImpl \
+    NearbyDiscovery \
+    NearbyPresence \
+    NearbySharing \
+    QC2GrallocBuffer \
+    QtiCarrierConfigHelper \
     SDM \
     SDM-histogram \
     SRE \
     WifiHAL \
     WifiService \
+    a2dp_offload \
+    bluetooth-a2dp \
     cnss-daemon \
     libcitsensorservice@2.0-impl \
     libsensor-displayalgo \
     libsensor-parseRGB \
     libsensor-ssccalapi \
-    CameraService \
-    ForegroundUtils \
     sensors \
     sensors-hal \
-    a2dp_offload \
-    bluetooth-a2dp \
-    BluetoothMetrics \
+    tftp_server \
     vendor.qti.bluetooth@1.0-ibs_handler \
     vendor.qti.bluetooth@1.0-patch_dl_manager \
     vendor.qti.bluetooth@1.0-wake_lock \
     vendor.qti.hardware.display.composer-service \
     vendor.xiaomi.sensor.citsensorservice@2.0-service \
-    DisplayManagerService \
-    DisplayModeController \
-    FrameTracker \
-    QC2GrallocBuffer \
-    tftp_server \
-    LOWI-9.0.1.89.z \
-    wpa_supplicant \
-    InetDiagMessage \
-    QtiCarrierConfigHelper \
-    DeviceStatisticsService \
-    DeviceInfoHidlClient \
-    NearbyDiscovery \
-    NearbyPresence \
-    NearbySharing \
-    GmsClient
+    wpa_supplicant
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
@@ -358,12 +358,12 @@ PRODUCT_PACKAGES += \
 
 # Media configs
 PRODUCT_PACKAGES += \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
     media_codecs.xml \
     media_codecs_c2.xml \
     media_codecs_performance_c2.xml \
-    video_system_specs.json \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor
+    video_system_specs.json
 
 # Mlipay
 PRODUCT_PACKAGES += \
@@ -380,12 +380,12 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp \
-    com.android.nfc_extras \
-    libchrome.vendor \
     NfcNci \
     Tag \
-    android.hardware.secure_element@1.2.vendor
+    android.hardware.nfc-service.nxp \
+    android.hardware.secure_element@1.2.vendor \
+    com.android.nfc_extras \
+    libchrome.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
@@ -434,11 +434,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
-# QTI fwk-detect
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti.vendor # Needed by CNE app
-
-# QMI
+# QMI (including fwk-detect JNI for CNE)
 PRODUCT_PACKAGES += \
     libcurl.vendor \
     libjson \
@@ -457,9 +453,9 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.6.vendor
 
 # Rootdir
 PRODUCT_PACKAGES += \
