@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+LOCAL_PATH := device/xiaomi/munch
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -51,6 +53,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # A/B
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
+# Restore the device path after inheriting external product makefiles.
+LOCAL_PATH := device/xiaomi/munch
 
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
@@ -515,6 +520,9 @@ PRODUCT_PACKAGES += \
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
+# Restore the device path after inheriting external product makefiles.
+LOCAL_PATH := device/xiaomi/munch
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
@@ -539,3 +547,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/munch/munch-vendor.mk)
+
+# Keep deferred local paths anchored to this device.
+LOCAL_PATH := device/xiaomi/munch
