@@ -54,7 +54,6 @@ on early-fs
 
 on fs
     start hwservicemanager
-    chmod 644 /mnt/vendor/persist/audio/us_manual_cal
     mkdir /mnt/vendor/spunvm 0660 system system
     mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
@@ -97,7 +96,6 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
-    mkdir /vendor/data/tombstones 0771 system system
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
     # Enable WLAN cold boot calibration
@@ -110,8 +108,6 @@ on post-fs-data
     chown system system /dev/ir_spi
     mkdir /data/vendor/wlan_logs 0777 root shell
     mkdir /data/vendor/nfc 0770 nfc nfc
-    chmod 0644 /dev/elliptic0
-    chmod 0644 /dev/elliptic1
     mkdir /data/vendor/misc/display 0771 system system
     mkdir /data/vendor/mqsas_common 0771 system system
     mkdir /data/vendor/thermal 0771 root system
